@@ -1,0 +1,117 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-neutral-very-dark-blue);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-white);
+}
+.main{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    margin: 2rem auto;
+}
+.introCard{
+    border-radius: 10px;
+    background-color: var(--clr-neutral-dark-blue);
+}
+.introTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem; 
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    background-color: var(--clr-primary-blue);
+}
+.introImage{
+    width: 60px;
+    height: 60px;
+    margin-left: .5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--clr-neutral-white);
+}
+.introTitle{
+    font-size: .975rem;
+    font-weight: var(--fw-light);
+    color: var(--clr-neutral-pale-blue);
+}
+.introTitle span{
+    display: block;
+    margin-top: .25rem;
+    font-size: 1.25rem;
+    color: var(--clr-neutral-white);
+}
+.introRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+}
+.introCategory{
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    color: var(--clr-neutral-desatured-blue);
+    transition: all ease-out 200ms;
+}
+.introCategory:hover{
+    cursor: pointer;
+    transform: scale(110%);
+    color: var(--clr-neutral-pale-blue);
+}
+.active{
+    transition: color ease 300ms;
+    font-size: 1.125rem;
+    color: var(--clr-neutral-white);
+}
+
+@media (min-width: 768px){
+    .main{
+        width: 95vw;
+        margin: .5rem 2rem;
+        column-gap: 2rem;
+    }
+    .introCard{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .introTop{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 2rem 2rem 6rem;
+    }
+    .introImage{
+        width: 70px;
+        height: 70px;
+        margin-top: 1rem;
+    }
+    .introTitle{
+        width: 200px;
+        font-size: 1rem;
+    }
+    .introTitle span{
+        font-size: 2.5rem;
+    }
+    .introRow{
+        max-height: 150px;
+        margin: 0 1rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .introCategory{
+        display: flex;
+        align-items: flex-end;
+    }
+}
