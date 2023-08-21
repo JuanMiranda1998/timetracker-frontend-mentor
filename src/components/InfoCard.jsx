@@ -2,8 +2,14 @@ import {PropTypes} from 'prop-types';
 import './InfoCard.css'
 
 export function InfoCard(props){
-
+  const category = props.category
   const theme = props.theme
+
+  function checkCategory(state){
+    if (state==='daily') return 'Yesterday'
+    if (state==='weekly') return 'Last week'
+    if (state==='monthly') return 'Last month'
+  }
 
     return (
         <section className='infoCard' style={{background: `url(${theme.icon}) no-repeat 92% -2% var(${theme.color})`}}>
@@ -14,7 +20,7 @@ export function InfoCard(props){
               </div>
               <div className="infoBotRow">
                 <p className='infoHours'>{props.current}hrs</p>
-                <p className='infoDate'>Last Week - {props.previous}hrs</p>
+                <p className='infoDate'>{checkCategory(category)} - {props.previous}hrs</p>
               </div>
         </div>
       </section>
@@ -24,6 +30,7 @@ export function InfoCard(props){
 InfoCard.propTypes = {
     title: PropTypes.string,
     theme: PropTypes.object,
+    category: PropTypes.string,
     current: PropTypes.string,
     previous: PropTypes.string
 };

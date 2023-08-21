@@ -65,6 +65,7 @@ function App() {
       <InfoCard key={item.title} 
       title={item.title}
       theme={setTheme(item)} 
+      category={category}
       current={`${evalCategory(item).current}`}
       previous={`${evalCategory(item).previous}`}/>)}
     </main>
