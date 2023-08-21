@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/JuanMiranda1998/timetracker-frontend-mentor)
+- Live Site URL: [Netlify](https://fmentor-timetracker.netlify.app/)
 
 ## My process
 
